@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
     - name: Install dependencies
       run: npm install
     - name: build
@@ -21,32 +25,32 @@ jobs:
       with:
         name: dist
         path: dist/
-#  publish:
-#      needs: build
-#      runs-on: ubuntu-latest
-#      steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          ref: gh-pages
-#          persist-credentials: false
-#          fetch-depth: 0
-#      - name: Remove old coverage
-#        run: if [ -d ./coverage ] ; then rm -r ./coverage; fi
-#      - uses: actions/download-artifact@v2
-#        with:
-#          name: dist
-#          path: ./
-#      - name: list dir
-#        run: ls -la coverage
-#      - name: Commit files
-#        run: |
-#          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-#          git config --local user.name "github-actions[bot]"
-#          git add -A
-#          git commit -m "Updated presentation report"
-#      - name: Push changes
-#        uses: ad-m/github-push-action@master
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          branch: gh-pages
+  publish:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: presentation
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Remove old files
+        run: shopt -s dotglob; rm -r *
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: ./
+      - name: list dir
+        run: ls -la ./
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "Updated presentation report"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: presentation
 
