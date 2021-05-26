@@ -18,7 +18,7 @@ jobs:
         key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
     - name: Install dependencies
       run: npm install
-    - name: build
+    - name: build --base /bbd_presentation/
       run: npm run build
     - name: Save dist
       uses: actions/upload-artifact@v2
