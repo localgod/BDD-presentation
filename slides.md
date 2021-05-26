@@ -70,7 +70,7 @@ h1 {
 
 ---
 layout: image-left
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://source.unsplash.com/3ROwc3JSjCk/1600x900
 ---
 
 # Never heard of it...
@@ -88,7 +88,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 
 ---
 layout: image-left
-image: https://unsplash.com/photos/7-gaPkhIgqs
+image: https://source.unsplash.com/Gej8FOFLlHg/1600x900
 ---
 
 # Code
