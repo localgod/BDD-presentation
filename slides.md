@@ -3,7 +3,7 @@
 theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://source.unsplash.com/KdeqA3aTnBY/1600x900
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -16,7 +16,7 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 ---
 
-# Behavior-driven development (BDD)
+# Behavior Driven Development (BDD)
 
 With Gerkin
 
@@ -26,7 +26,7 @@ With Gerkin
   </span>
 </div>
 
-<a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+<a href="https://github.com/localgod/bbd_presentation" target="_blank" alt="GitHub"
   class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
   <carbon-logo-github />
 </a>
@@ -118,68 +118,29 @@ Kiss Gherkin...
 <arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
 
 ---
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
----
-class: px-20
+layout: image-right
+image: https://source.unsplash.com/XzuJuyYLjmE/1600x900
 ---
 
-# Themes
+# What is Gherkin?
 
-Slidev comes with powerful theming support. Themes are able to provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+- Domain Specific Language
+- Business Readable
+- Created especially fordescribing behaviour
+- Originally created in the ruby community
+- The first parser was called Cucumber
 
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
 ---
-theme: default
+layout: default
 ---
-```
 
-```yaml
----
-theme: seriph
----
-```
+# Why should I care?
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
+- Document features in legacy systems
+- Regression testing
+- Live, verified product requirement specification
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+<img src="https://www.nowsecure.com/wp-content/uploads/2017/05/NIST-relative-cost-to-fix-a-flaw.png" alt="drawing" width="400"/>
 
 ---
 preload: false
