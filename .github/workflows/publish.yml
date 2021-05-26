@@ -34,8 +34,6 @@ jobs:
           ref: presentation
           persist-credentials: false
           fetch-depth: 0
-      - name: Remove old files
-        run: shopt -s dotglob; rm -r *
       - uses: actions/download-artifact@v2
         with:
           name: dist
