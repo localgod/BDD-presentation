@@ -18,8 +18,8 @@ jobs:
         key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
     - name: Install dependencies
       run: npm install
-    - name: build --base /bbd_presentation/
-      run: npm run build
+    - name: build
+      run: npm run build_github_pages
     - name: Save dist
       uses: actions/upload-artifact@v2
       with:
@@ -34,6 +34,10 @@ jobs:
           ref: presentation
           persist-credentials: false
           fetch-depth: 0
+      - name: Commit files
+        run: |
+          rm -rf assets
+          rm -f index.html
       - uses: actions/download-artifact@v2
         with:
           name: dist
