@@ -254,17 +254,17 @@ You can create diagrams / graphs from textual descriptions, directly in your Mar
 
 <div class="grid grid-cols-2 gap-4 pt-4 -mb-6">
 
-```mermaid {scale: 0.9}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+```mermaid {scale: 2.0}
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+section A section
+Create            :done,    des1, 2014-01-06,2014-01-08
+Tweak              :active,  des2, 2014-01-09, 3d
+Trim               :         des3, after des2, 5d
+Release               :         des4, after des3, 5d
 ```
 
 </div>
