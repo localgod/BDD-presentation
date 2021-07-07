@@ -9,7 +9,9 @@ github:
     addBadge: true
 tasks:
   - name: Fetch dependencies
-    init: npm install
+    init: |
+      npm install -g npm
+      npm install
 vscode:
   extensions:
     - github.vscode-pull-request-github
