@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 dist
 *.local
+*.pdf
 index.html
 .remote-assets
 components.d.ts
