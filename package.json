@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "@slidev/cli": "^0.22.7",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-default": "^0.21.1",
+    "@slidev/theme-seriph": "^0.21.1"
   },
   "name": "bdd-presentation",
   "devDependencies": {
-    "playwright-chromium": "^1.13.1"
+    "playwright-chromium": "^1.16.3"
   }
 }
