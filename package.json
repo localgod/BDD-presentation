@@ -7,12 +7,13 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.22.7",
-    "@slidev/theme-default": "^0.21.1",
-    "@slidev/theme-seriph": "^0.21.1"
+    "@slidev/cli": "^0.31.3",
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.2"
   },
   "name": "bdd-presentation",
   "devDependencies": {
-    "playwright-chromium": "^1.16.3"
+    "@iconify-json/uim": "^1.1.1",
+    "playwright-chromium": "^1.21.1"
   }
 }
