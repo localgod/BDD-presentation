@@ -14,9 +14,9 @@ tasks:
       sudo apt-get update
       sudo apt -y install ./google-chrome-stable_current_amd64.deb
       rm ./google-chrome-stable_current_amd64.deb
-      npm install -g npm@8.1.4
+      npm install -g npm@8.10.0
+      npm install -g markdownlint-cli
       npm install
 vscode:
   extensions:
-    - github.vscode-pull-request-github
     - octref.vetur
