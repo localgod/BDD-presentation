@@ -8,15 +8,24 @@ github:
     addComment: false
     addBadge: true
 tasks:
-  - name: Fetch dependencies
-    init: |
+  - before: |
       wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
       sudo apt-get update
       sudo apt -y install ./google-chrome-stable_current_amd64.deb
       rm ./google-chrome-stable_current_amd64.deb
-      npm install -g npm@8.10.0
+      npm install -g npm@latest
       npm install -g markdownlint-cli
+      npx playwright install
+      npx playwright install-deps
+    init: |
       npm install
+      npm run dev
+    command: 'npm run dev'
+
+gitConfig:
+  alias.st: status
+  alias.co: checkout
+
 vscode:
   extensions:
     - octref.vetur
