@@ -20,3 +20,4 @@ gitConfig:
 vscode:
   extensions:
     - octref.vetur
+    - DavidAnson.vscode-markdownlint
