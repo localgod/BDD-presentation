@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "build_github_pages": "slidev build --base /bbd_presentation/",
     "export": "slidev export"
   },
   "dependencies": {
