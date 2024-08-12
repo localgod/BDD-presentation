@@ -13,6 +13,6 @@
   "name": "bdd-presentation",
   "devDependencies": {
     "@iconify-json/uim": "^1.1.10",
-    "playwright-chromium": "^1.45.3"
+    "playwright-chromium": "^1.46.0"
   }
 }
